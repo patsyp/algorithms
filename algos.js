@@ -1,0 +1,25 @@
+//Return the first index of an array in which the sum of the intergers on the left and right sice are equal.
+function findEvenIndex(arr){
+	var leftSum = 0
+	var rightSum = 0
+	// var leftIndex = 0
+	if (arr.length == 0){
+			console.log("Empty Array")
+			return 0
+	}
+	
+	for (var i=0; i<arr.length; i++){
+		leftSum = leftSum + arr[i]
+		rightSum = 0
+		for (var l=arr.length-1; l>i; l--){
+			rightSum = rightSum + arr[l]
+			if (rightSum == leftSum && l == i+2){
+				return l-1
+			}
+		}
+	}
+	return -1
+}
+
+findEvenIndex([1,2,3,4,3,2,1])//returns index 3
+findEvenIndex([1,100,50,-51,1,1])//returns index 1
