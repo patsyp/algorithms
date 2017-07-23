@@ -2,12 +2,10 @@
 function findEvenIndex(arr){
 	var leftSum = 0
 	var rightSum = 0
-	// var leftIndex = 0
 	if (arr.length == 0){
 			console.log("Empty Array")
 			return 0
 	}
-	
 	for (var i=0; i<arr.length; i++){
 		leftSum = leftSum + arr[i]
 		rightSum = 0
@@ -23,3 +21,27 @@ function findEvenIndex(arr){
 
 findEvenIndex([1,2,3,4,3,2,1])//returns index 3
 findEvenIndex([1,100,50,-51,1,1])//returns index 1
+
+//Takes any non-negative integer and returns new interger with digits in descending order.
+function highToLow(num){ 
+	var arr = Array.from(num.toString()).map(Number);
+	var max=0
+	var newArr = []
+	var len = arr.length
+	while (newArr.length<len){
+		for (var i=0; i<arr.length; i++){	
+			if (max<arr[i]){
+				max = arr[i]	
+			}
+		}
+		newArr.push(max)
+		var inx = arr.indexOf(max)
+		arr.splice(inx, 1)
+		max = arr[0]
+	}
+	var newNum = newArr.join("")
+	return parseInt(newNum)
+}
+// console.log(highToLow(2501)) //returns 5210
+
+
