@@ -46,11 +46,11 @@ function highToLow(num){
 
 //Given a string of space separated numbers, return the highest and lowest number.
 function highAndLow(num){
-	var numString = num.replace(/ /g, "")
-	var arr = Array.from(numString.toString()).map(Number)
-	max = arr[0]
-	min = arr[0]
+	var arr = num.split(" ")
+	var max = arr[0]
+	var min = arr[0]
 	for (var i=0; i<arr.length; i++){
+		arr[i] = parseInt(arr[i])
 		if (max < arr[i]){
 			max = arr[i]
 		}
@@ -58,7 +58,6 @@ function highAndLow(num){
 			min = arr[i]
 		}
 	}
-	console.log(arr)
 	return `${max} ${min}`
 }
 console.log(highAndLow("1 -1"))
