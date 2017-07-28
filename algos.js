@@ -60,5 +60,38 @@ function highAndLow(num){
 	}
 	return `${max} ${min}`
 }
-console.log(highAndLow("1 -1"))
+highAndLow("1 -1")
+
+function queueTime(customers, n) {
+	var firstTill = customers[0]
+	var sum = 0
+	var max = customers[0]
+	var min = customers[0]
+  	for (var i=0; i<customers.length; i++){
+  		sum += customers[i]
+  		if (max < customers[i]){
+  			max = customers[i]
+  		}
+  		if (min > customers[i]){
+  			min = customers[i]
+  		}	
+  	}
+  	if (max > sum-max || n >= customers.length){
+  			return max
+  		}
+	else {
+		if (n==1){
+			return sum
+		}
+		else {
+			var sortArr = customers.sort(function(a, b){return a-b})
+			for (var i=n; i<customers.length; i++){
+				 sum = min + customers[i]
+			}
+		}
+	}
+}
+
+console.log(queueTime([2,2,3,3,4,4], 2))
+
 
