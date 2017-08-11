@@ -63,35 +63,34 @@ function highAndLow(num){
 highAndLow("1 -1")
 
 function queueTime(customers, n) {
-	var firstTill = customers[0]
-	var sum = 0
-	var max = customers[0]
-	var min = customers[0]
-  	for (var i=0; i<customers.length; i++){
-  		sum += customers[i]
-  		if (max < customers[i]){
-  			max = customers[i]
-  		}
-  		if (min > customers[i]){
-  			min = customers[i]
-  		}	
-  	}
-  	if (max > sum-max || n >= customers.length){
-  			return max
-  		}
-	else {
-		if (n==1){
-			return sum
+	var arr=customers.slice(n)
+	console.log(arr)
+	var sum=0
+	if (customers.length == 0){
+		return sum
+	}
+	var sortArr = customers.sort(function(a, b){return a-b})
+	var max = sortArr[sortArr.length-1]
+	var min = sortArr[0]
+	for (var i=0; i<arr.length; i++){
+				sum += arr[i]
 		}
-		else {
-			var sortArr = customers.sort(function(a, b){return a-b})
-			for (var i=n; i<customers.length; i++){
+	}
+  	if (n >= customers.length){
+  			return max
+  	}
+	if (n == 1){
+		return s(customers)
+	}
+	else {
+		for (var i=n; i<customers.length; i++){
 				 sum = min + customers[i]
 			}
-		}
 	}
 }
 
-console.log(queueTime([2,2,3,3,4,4], 2))
+console.log(queueTime([1, 2, 5, 6], 1))
 
+
+// Test.assertEquals(queueTime([2,2,3,3,4,4], 2), 9);
 
