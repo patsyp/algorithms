@@ -106,6 +106,7 @@ function findPeaks(arr){
 		if (arr[i]-arr[i+1]==0){
 			pos.push(i)
 			peaks.push(arr[i])
+			break;
 		}
 
 	}
@@ -113,4 +114,4 @@ function findPeaks(arr){
 }
 
 console.log(findPeaks([1, 3, 7, 3, 5, 2]))
-console.log(findPeaks([1, 3, 3, 2]))
+console.log(findPeaks([1, 3, 3, 3]))
