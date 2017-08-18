@@ -86,7 +86,7 @@ function reverseWords(string){
 	return string.split(" ").reverse().join(" ")
 } 
 
-console.log(reverseWords("Patsy says hello"))//returns "hello says Patsy"
+reverseWords("Patsy says hello")//returns "hello says Patsy"
 
 //Given a string find and return longest word
 function longestWord(string){
@@ -102,4 +102,19 @@ function longestWord(string){
 	return word
 }
 
-console.log(longestWord("Cat dog whatever"))
+longestWord("Cat dog whatever")//returns whatever
+
+//Return the sum of a sequence of integers.  
+//The sequence is defined by 3 non-negative values: begin, end, step.
+//If begin value is greater than the end, function should returns 0.
+const sequenceSum = (begin, end, step) => {
+if (begin > end){
+  return 0
+}
+  var sum = begin
+  while (begin+step <= end){
+    begin += step
+    sum += begin
+  }
+  return sum
+};
