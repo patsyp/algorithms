@@ -62,3 +62,23 @@ function highAndLow(num){
 }
 highAndLow("1 -1")
 
+//Build split method that can split string into an array on spaces.
+function stringArray(string){
+	var word_arr = []
+	var word = ''
+	for (var i=0; i<string.length; i++){
+		if (string[i]!= " "){
+			word += string[i]	
+		}
+		else {
+			word_arr.push(word)
+			word = ''
+		}
+	}
+	if (word != " "){
+			word_arr.push(word)
+		}
+	return word_arr
+}
+
+console.log(stringArray("Coding is fun"))
