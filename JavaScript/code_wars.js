@@ -75,10 +75,31 @@ function stringArray(string){
 			word = ''
 		}
 	}
-	if (word != " "){
-			word_arr.push(word)
-		}
+	word_arr.push(word)
 	return word_arr
 }
 
 console.log(stringArray("Coding is fun"))
+
+//Given a string reverse the order of words.
+function reverseWords(string){
+	return string.split(" ").reverse().join(" ")
+} 
+
+console.log(reverseWords("Patsy says hello"))//returns "hello says Patsy"
+
+//Given a string find and return longest word
+function longestWord(string){
+	var word_arr = string.split(" ")
+	var longest = 0
+	word = ''
+	for (var i=0; i<word_arr.length; i++){
+		if(longest <word_arr[i].length){
+			longest = word_arr[i].length
+			word = word_arr[i]
+		}
+	}
+	return word
+}
+
+console.log(longestWord("Cat dog whatever"))
