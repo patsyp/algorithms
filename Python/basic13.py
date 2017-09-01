@@ -88,3 +88,4 @@ def swapString(arr):
 			arr[i]='hello'
 	return arr
 
+print (swapString([1, 4, -5]))
