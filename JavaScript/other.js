@@ -2,14 +2,18 @@
 
 function rSigma(n){
 	var sum = 0
-	while (n>=1){
-		sum +=n
-		n--
-		console.log(n)
+	if (n == 1){
+		return 0
 	}
-	return sum
+	if (n > 1){
+		while (n >= 1){
+			sum +=n
+			n--
+			console.log(n)
+		}
+		return sum
+	}
 }
 
-rSigma(5) //should return 15 (1+2+3+4+5)
+console.log(rSigma(2.5)) //should return 15 (1+2+3+4+5)
 
-console.log(rSigma(-1))
