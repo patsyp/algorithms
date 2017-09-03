@@ -15,7 +15,7 @@ def findSum
 	1.upto(255) { |i| puts sum += i}
 end
 
-findSum
+# findSum
 # 4. Iterating through an array and print each value.
 def iterate(arr)
 	for i in 0...arr.length
@@ -60,12 +60,9 @@ end
 
 # 9. Square the values
 def squareValues (arr)
-	for i in 0...arr.length
-		arr[i] = arr[i] * arr[i]
-	end
-	puts arr
+	puts arr.map {|i| i**2}
 end
-# squareValues([1, 2, 3, 4])
+squareValues([1, 2, 3, 4])
 
 #10.  Eliminate Negative Numbers--replace with 0.
 def noNegs(arr)
