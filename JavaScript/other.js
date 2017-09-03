@@ -25,3 +25,4 @@ function rSigma(n){
 
 console.log(rSigma(5)) //should return 15 (1+2+3+4+5)
 
+

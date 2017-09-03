@@ -7,19 +7,15 @@ end
 def oddNum
 	0.upto(255) { |i| puts i unless i.even? }
 end
-oddNum()
+
 
 #3. Print sum of all numbers 1-255.
 def findSum
-	num = 0
 	sum = 0
-	while num <= 255
-		puts "New number: #{num} Sum:#{sum}"
-		num +=1
-		sum = sum + num
-	end
+	1.upto(255) { |i| puts sum += i}
 end
 
+findSum
 # 4. Iterating through an array and print each value.
 def iterate(arr)
 	for i in 0...arr.length
@@ -31,7 +27,7 @@ end
 def findMax(arr)
 	puts arr.max
 end
-findMax([-2, -5, -6, -8, -10])
+# findMax([-2, -5, -6, -8, -10])
 
 #6. Get Average
 def getAverage(arr)
@@ -41,14 +37,14 @@ def getAverage(arr)
 	end
 	puts "The average is #{sum/arr.length}"
 end
-getAverage([2, 10, 3])
+# getAverage([2, 10, 3])
 
 #7. Create an array with only odd numbers 1-255
 def createArr
 	y = (1..255).to_a.reject {|elem| elem.even? }
 	puts y
 end
-createArr()
+# createArr()
 
 # 8. Greater than y
 def greaterThanY(arr, val)
@@ -60,7 +56,7 @@ def greaterThanY(arr, val)
 	end
 	puts count
 end
-greaterThanY([1, 4, 6, 8, 9], 0)
+# greaterThanY([1, 4, 6, 8, 9], 0)
 
 # 9. Square the values
 def squareValues (arr)
@@ -69,7 +65,7 @@ def squareValues (arr)
 	end
 	puts arr
 end
-squareValues([1, 2, 3, 4])
+# squareValues([1, 2, 3, 4])
 
 #10.  Eliminate Negative Numbers--replace with 0.
 def noNegs(arr)
@@ -81,7 +77,7 @@ def noNegs(arr)
 	end
 	puts arr
 end
-noNegs([1, 5, -7, -10, 1])
+# noNegs([1, 5, -7, -10, 1])
 
 #11. Max, Min and Average
 def maxMinAvg(arr)
@@ -94,7 +90,7 @@ def maxMinAvg(arr)
 	puts "The min is #{arr.min}"
 	puts "The max is #{arr.max}"
 end
-maxMinAvg([6, 4])
+# maxMinAvg([6, 4])
 
 #12. Shifting
 def shiftArr(arr)
@@ -103,7 +99,7 @@ def shiftArr(arr)
 	arr.push(0)
 	print arr
 end
-shiftArr([3, 1, 7, 9, 10])
+# shiftArr([3, 1, 7, 9, 10])
 
 #13. Number to String
 def numtoString(arr)
@@ -115,4 +111,4 @@ def numtoString(arr)
 	end
 	puts arr
 end
-numtoString([1, 5, -7, -10, 1])
+# numtoString([1, 5, -7, -10, 1])
