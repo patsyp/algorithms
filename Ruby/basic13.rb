@@ -32,12 +32,10 @@ end
 #6. Get Average
 def getAverage(arr)
 	sum = 0
-	for i in 0...arr.length
-		sum = sum + arr[i]
-	end
+	arr.each { |i| sum += i }
 	puts "The average is #{sum/arr.length}"
 end
-# getAverage([2, 10, 3])
+getAverage([2, 10, 3])
 
 #7. Create an array with only odd numbers 1-255
 def createArr
