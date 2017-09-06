@@ -28,11 +28,34 @@ console.log(rSigma(5)) //should return 15 (1+2+3+4+5)
 function binarySearch(arr, val){
 	var len = arr.length
 	var half = Math.floor(len/2)
-	if (arr[half]<val){ 
-		var lowerHalf= arr.slice(half, len)
+	if (arr[half]>val){ 
+		var lowerHalf= arr.slice(0, half)
+		if (lowerHalf[0] == val){
+			return {'Value': val, 'Index': 0}
+		}
+		else{
+			while (lowerHalf.length > 1){
+				lowerHalf=lowerHalf.slice(Math.floor(lowerHalf.length/2), lowerHalf.length)
+				if (lowerHalf[0] == val){
+					return {'Value': val, 'Index':arr.indexOf(val)}
+				}
+			}
+		}
 	}
-	if (arr[half]>val){
-		var upperHalf= arr.slice(0, half)
+	if (arr[half]<val){
+		var upperHalf= arr.slice (half, len)
+		if (upperHalf[0] = val){
+			return {'Value': val, 'Index': arr.indexOf(val)}
+		}
+		else{
+			while (upperHalf.length > 1){
+				upperHalf = upperHalf.slice(Math.floor(lowerHalf.length/2), lowerHalf.length)
+				if (lowerHalf[0] == val){
+					return {'Value': val, 'Index':arr.indexOf(val)}
+				}
+			}
+
+		}
 	}
 }
 
