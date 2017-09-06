@@ -35,7 +35,8 @@ def getAverage(arr)
 	arr.each { |i| sum += i }
 	puts "The average is #{sum/arr.length}"
 end
-getAverage([2, 10, 3])
+# getAverage([2, 10, 3])
+#returns 5
 
 #7. Create an array with only odd numbers 1-255
 def createArr
