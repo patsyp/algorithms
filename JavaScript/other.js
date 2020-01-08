@@ -51,12 +51,12 @@ function binarySearch(arr, val){
 			while (upperHalf.length > 1){
 				upperHalf = upperHalf.slice(Math.floor(lowerHalf.length/2), lowerHalf.length)
 				if (lowerHalf[0] == val){
-					return {'Value': val, 'Index':arr.indexOf(val)}
+					return {'Value': lowerHalf[0], 'Index':arr.indexOf(val)}
 				}
 			}
 
 		}
 	}
 }
-
-console.log(binarySearch([1, 2, 4, 5, 7, 9,10], 9))
+//Refactor!!!!!!!
+console.log(binarySearch([1, 2, 4, 5, 7, 9,10], 5))
